@@ -8,9 +8,10 @@
         <version>3.2.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+    <packaging>war</packaging> 
     <groupId>com.example</groupId>
     <artifactId>connector</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>connector</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -53,14 +54,20 @@
         </dependency>
 
     </dependencies>
-
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
+    <plugins>
+        <!-- Plugin pour générer le WAR -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.2.2</version>
+            <configuration>
+                <!-- Nom du fichier WAR généré -->
+                <warName>connector</warName>
+                <!-- Chemin de l'application Web -->
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 </project>
