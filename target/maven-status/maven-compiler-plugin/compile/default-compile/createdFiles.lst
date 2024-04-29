@@ -1,5 +1,5 @@
 model/Ticket.class
 com/example/connector/ConnectorApplication.class
-com/example/connector/FilterAuth.class
+controller/Home.class
 model/DataTickets.class
 controller/Controller.class

@@ -18,7 +18,7 @@ import java.io.IOException;
 import model.*;
 
 @RestController
-@RequestMapping("/api/v1/printer")
+@RequestMapping("api/v1/printer")
 public class Controller {
 
     private static final Logger logger = LoggerFactory.getLogger(Controller.class);
